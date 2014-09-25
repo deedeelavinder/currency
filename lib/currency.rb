@@ -33,4 +33,13 @@ class Currency
     end
   end
 
+  def multiply(mult_amt)
+    new_amount = @amount * mult_amt.to_f
+    Currency.new(@currency, new_amount)
+  end
+
 end
+# money = Currency.new(:USD, 20)
+# p money
+# money.subtract(5)
+# p money
